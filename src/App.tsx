@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import UserManagement from './components/UserManagement';
+import RoleManagement from './components/RoleManagement';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mx-auto py-8">
+      <h1 className="text-3xl font-bold mb-6 text-center">Role-Based Access Control (RBAC)</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <UserManagement />
+        <RoleManagement />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
